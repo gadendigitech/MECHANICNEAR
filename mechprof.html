@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Mechanic Profile | Mechanic-Near</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <div class="app-container">
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress-step active" data-step="1">1</div>
+            <div class="progress-step" data-step="2">2</div>
+            <div class="progress-step" data-step="3">3</div>
+            <div class="progress-step" data-step="4">4</div>
+        </div>
+
+        <!-- Form Container -->
+        <form class="profile-form" id="mechanicSignupForm">
+            <!-- Step 1: Basic Information -->
+            <div class="form-step active" data-step="1">
+                <h2>Basic Information</h2>
+                
+                <div class="form-group">
+                    <label for="fullName">Full Name*</label>
+                    <input type="text" id="fullName" required placeholder="James Mwangi">
+                </div>
+                
+                <div class="form-group">
+                    <label for="specialization">Primary Specialization*</label>
+                    <select id="specialization" required>
+                        <option value="">Select specialization</option>
+                        <option value="general">General Mechanic</option>
+                        <option value="electrical">Auto Electrician</option>
+                        <option value="engine">Engine Specialist</option>
+                        <option value="brakes">Brakes & Suspension</option>
+                        <option value="diagnostics">Diagnostics Expert</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="experience">Years of Experience*</label>
+                    <input type="number" id="experience" required min="0" placeholder="5">
+                </div>
+                
+                <div class="form-group">
+                    <label for="bio">Short Bio</label>
+                    <textarea id="bio" placeholder="Tell customers about your skills and experience"></textarea>
+                </div>
+                
+                <div class="form-navigation">
+                    <button type="button" class="next-btn">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Contact & Location -->
+            <div class="form-step" data-step="2">
+                <h2>Contact & Location</h2>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" required placeholder="+254 700 000000">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="your@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Service Location*</label>
+                    <input type="text" id="location" required placeholder="Westlands, Nairobi">
+                </div>
+                
+                <div class="form-group">
+                    <label for="radius">Maximum Service Radius (km)*</label>
+                    <div class="range-container">
+                        <input type="range" id="radius" min="5" max="50" value="10">
+                        <span id="radiusValue">10 km</span>
+                    </div>
+                </div>
+                
+                <div class="form-navigation">
+                    <button type="button" class="back-btn">← Back</button>
+                    <button type="button" class="next-btn">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Services & Pricing -->
+            <div class="form-step" data-step="3">
+                <h2>Services & Pricing</h2>
+                
+                <div class="form-group">
+                    <label>Services Offered*</label>
+                    <div class="services-grid">
+                        <label class="service-option">
+                            <input type="checkbox" name="services" value="engine"> Engine Repair
+                        </label>
+                        <label class="service-option">
+                            <input type="checkbox" name="services" value="electrical"> Electrical Systems
+                        </label>
+                        <label class="service-option">
+                            <input type="checkbox" name="services" value="brakes"> Brake Service
+                        </label>
+                        <label class="service-option">
+                            <input type="checkbox" name="services" value="diagnostics"> Diagnostics
+                        </label>
+                        <label class="service-option">
+                            <input type="checkbox" name="services" value="ac"> AC Repair
+                        </label>
+                        <label class="service-option">
+                            <input type="checkbox" name="services" value="tires"> Tire Service
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="otherServices">Other Services</label>
+                    <textarea id="otherServices" placeholder="List any other services you offer"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="hourlyRate">Hourly Rate (KES)*</label>
+                    <input type="number" id="hourlyRate" required min="500" placeholder="1500">
+                </div>
+                
+                <div class="form-group">
+                    <label for="calloutFee">Call-out Fee (KES)</label>
+                    <input type="number" id="calloutFee" min="0" placeholder="500">
+                </div>
+                
+                <div class="form-navigation">
+                    <button type="button" class="back-btn">← Back</button>
+                    <button type="button" class="next-btn">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Availability -->
+            <div class="form-step" data-step="4">
+                <h2>Working Hours</h2>
+                
+                <div class="availability-container">
+                    <div class="day-schedule">
+                        <div class="day-row">
+                            <span>Monday</span>
+                            <input type="time" value="08:00"> to <input type="time" value="18:00">
+                        </div>
+                        <div class="day-row">
+                            <span>Tuesday</span>
+                            <input type="time" value="08:00"> to <input type="time" value="18:00">
+                        </div>
+                        <div class="day-row">
+                            <span>Wednesday</span>
+                            <input type="time" value="08:00"> to <input type="time" value="18:00">
+                        </div>
+                        <div class="day-row">
+                            <span>Thursday</span>
+                            <input type="time" value="08:00"> to <input type="time" value="18:00">
+                        </div>
+                        <div class="day-row">
+                            <span>Friday</span>
+                            <input type="time" value="08:00"> to <input type="time" value="18:00">
+                        </div>
+                        <div class="day-row">
+                            <span>Saturday</span>
+                            <input type="time" value="09:00"> to <input type="time" value="14:00">
+                        </div>
+                        <div class="day-row">
+                            <span>Sunday</span>
+                            <div class="closed-toggle">
+                                <label class="switch">
+                                    <input type="checkbox" id="sundayClosed" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                                <span>Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group availability-toggle">
+                    <label for="availableNow">Currently Available for Jobs</label>
+                    <label class="switch">
+                        <input type="checkbox" id="availableNow" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                
+                <div class="form-navigation">
+                    <button type="button" class="back-btn">← Back</button>
+                    <button type="submit" class="submit-btn">Complete Profile</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- Load Firebase  -->
+<script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-auth-compat.js"></script>
+
+<script type="module" src="firebase.js"></script> 
+
+<script type="module" src="mechprof.js"></script>
+   
+
+</body>
+</html>

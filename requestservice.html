@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Service | Mechanic Near App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1 class="app-title">MECHANIC NEAR APP</h1>
+        </header>
+        <div class="frame-container">
+            <div class="nav-arrow" id="back-btn">
+                <i class="material-icons">arrow_back</i>
+                <span>Back</span>
+            </div>
+            <form id="service-request-form">
+            <div class="request-service">
+                <h2 class="section-title">Request Service</h2>
+                <div class="form-group">
+                    <label class="form-label">Search Issues</label>
+                    <input type="text" class="form-control" id="issue" placeholder="What's the problem?">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Vehicle Information</label>
+                    <input type="text" class="form-control" id="vehicle" placeholder="Enter vehicle details">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Description</label>
+                    <textarea class="form-control" id="description" placeholder="Describe the issue in detail"></textarea>
+                </div>
+                
+                <!-- Map Container -->
+                <div id="map"></div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn" id="submit-request">Submit Request</button>
+
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Load Firebase using CDN -->
+    <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-auth-compat.js"></script>
+    
+    <!-- Your JavaScript -->
+    <script src="requestservice.js"></script>
+
+</body>
+</html>

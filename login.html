@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Mechanic-Near App - Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Firebase compat scripts removed as you use modular SDK in JS -->
+</head>
+<body class="bg-img">
+    <div class="form-container">
+        <h2>MECHANIC-NEAR APP</h2>
+        <form id="loginForm">
+
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" name="email" required placeholder="you@example.com" />
+
+            <label for="loginPassword">Password</label>
+            <div style="position: relative;">
+              <input type="password" id="loginPassword" name="password" required placeholder="Enter your password" minlength="6" />
+              <button type="button" id="togglePassword" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);">
+                Show
+              </button>
+            </div>
+
+            <button type="submit">Sign In</button>
+
+            <div class="links">
+                <a href="#" id="forgotPasswordLink">Forgot password?</a>
+                <br />
+                <span>Don't have an account?</span>
+                <a href="signup.html">Register</a>
+            </div>
+        </form>
+    </div>
+
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

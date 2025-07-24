@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mechanic-Near App - Register</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore-compat.js"></script>
+</head>
+<body class="bg-img">
+    <div class="form-container">
+        <h2>Register - Mechanic-Near App</h2>
+        <form id="signupForm">
+            <label for="role" class="login-label">Register as:</label>
+            <div class="role-options">
+                <input type="radio" id="role-driver" name="role" value="driver" required>
+                <label for="role-driver">Driver</label>
+                <input type="radio" id="role-mechanic" name="role" value="mechanic" required>
+                <label for="role-mechanic">Mechanic</label>
+            </div>
+            <label for="signupName">Full Name</label>
+            <input type="text" id="signupName" name="name" required>
+            <label for="signupEmail">Email</label>
+            <input type="email" id="signupEmail" name="email" required>
+            <label for="signupPhone">Phone Number</label>
+            <input type="text" id="signupPhone" name="phone" required>
+            <label for="signupSkills">Skills/Expertise</label>
+            <input type="text" id="signupSkills" name="skills" required>
+            <label for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" name="password" required>
+            <label for="signupConfirmPassword">Confirm Password</label>
+            <input type="password" id="signupConfirmPassword" name="confirmPassword" required>
+            <button type="submit">Register</button>
+            <div class="links">
+                <span>Already have an account?</span>
+                <a href="login.html">Sign In</a>
+            </div>
+        </form>
+    </div>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="./firebase.js"></script>
+
+</body>
+</html>
